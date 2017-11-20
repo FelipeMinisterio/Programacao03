@@ -1,12 +1,13 @@
 package br.com.prog3.trabalho5pc3;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class CrudDisciplina {
 
-	private static Map<Integer, Disciplina> mapaDisciplina;
+	private static Map<Integer, Disciplina> mapaDisciplina = new HashMap<>();
 
 	public CrudDisciplina() {
 		Disciplina d1 = new Disciplina();
@@ -44,12 +45,15 @@ public class CrudDisciplina {
 		mapaDisciplina.put(disciplina.getCodigo(), disciplina);
 	}
 
-	public void excluir(Integer codigo) {
+	public String excluir(Integer codigo) {
 
 		if (mapaDisciplina.containsKey(codigo) == true) {
 			mapaDisciplina.remove(codigo);
+			
+			
+			return "Disciplina apagada!!!";
 		} else {
-			System.out.println("Disciplina não encontrada.");
+			return "Disciplina não encontrada.";
 		}
 
 	}
