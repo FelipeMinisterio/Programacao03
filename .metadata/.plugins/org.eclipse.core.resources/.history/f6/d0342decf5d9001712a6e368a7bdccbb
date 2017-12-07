@@ -1,0 +1,58 @@
+package br.com.prog3.trabalho08.controller;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+import br.com.prog3.trabalho08.model.Veiculo;
+import br.com.prog3.trabalho08.persistence.VeiculoDaoImp;
+
+@RequestScoped
+@ManagedBean
+public class VeiculoController {
+
+	private Veiculo veiculo = new Veiculo();
+	private Veiculo veiculoSelected = new Veiculo();
+	
+	public Veiculo getVeiculoSelected() {
+		return veiculoSelected;
+	}
+	
+	public void setVeiculoSelected(Veiculo veiculoSelected) {
+		this.veiculoSelected = veiculoSelected;
+	}
+
+	public Veiculo getVeiculo() {
+		return veiculo;
+	}
+
+	public void setVeiculo(Veiculo veiculo) {
+		this.veiculo = veiculo;
+	}
+
+	public void incluir(Veiculo veiculo) {
+		VeiculoDaoImp vd = new VeiculoDaoImp();
+		vd.incluir(veiculo);
+	}
+
+	public void alterar(Veiculo veiculo) {
+		VeiculoDaoImp vd = new VeiculoDaoImp();
+		vd.alterar(veiculo);
+	}
+
+	public void excluir(Veiculo veiculo) {
+		VeiculoDaoImp vd = new VeiculoDaoImp();
+		vd.excluir(veiculo);
+	}
+
+	public List<Veiculo> listarTodos() {
+		VeiculoDaoImp vd = new VeiculoDaoImp();
+		return vd.listarTodos();
+	}
+
+	public Veiculo buscarPelaPlaca(String placa) {
+		VeiculoDaoImp vd = new VeiculoDaoImp();
+		return vd.buscarPelaPlaca(placa);
+	}
+}

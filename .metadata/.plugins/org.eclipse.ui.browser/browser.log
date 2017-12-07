@@ -1,0 +1,19 @@
+
+dez 07, 2017 11:45:43.60 NEW SESSION
+dez 07, 2017 11:45:43.73 [433452:432180:1207/114543.531:ERROR:browser_gpu_channel_host_factory.cc(107)] Failed to launch GPU process.
+
+dez 07, 2017 11:54:01.14 NEW SESSION
+dez 07, 2017 11:54:01.14 [7096:6164:1207/115401.097:ERROR:connection_factory_impl.cc(381)] Failed to connect to MCS endpoint with error -118
+dez 07, 2017 11:55:40.75 [7096:6164:1207/115540.757:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:55:40.75 [7096:6164:1207/115540.757:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:55:40.75 [7096:6164:1207/115540.757:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:55:40.75 [7096:6164:1207/115540.757:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:18.90 [7096:6164:1207/115718.901:ERROR:service_manager.cc(157)] Connection InterfaceProviderSpec prevented service: content_renderer from binding interface: blink::mojom::ReportingServiceProxy exposed by: content_browser
+dez 07, 2017 11:57:40.75 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.75 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.76 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.76 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.76 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.76 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.77 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED
+dez 07, 2017 11:57:40.77 [7096:6164:1207/115740.758:ERROR:process_metrics.cc(105)] NOT IMPLEMENTED

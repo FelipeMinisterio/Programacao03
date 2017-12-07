@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Dtren</title>
+</h:head>
+<body>
+
+	<h:form>
+		<p:panel id="panel" header="Adicionar Carro"
+			style="margin-bottom:10px;">
+			<p:messages id="messages" />
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel for="name" value="Placa:" />
+				<p:inputText id="name1" required="true"
+					value="#{veiculoController.veiculo.placa}" />
+
+				<h:outputLabel for="name" value="Ano De fabricação:" />
+				<p:inputText id="name2" required="true"
+					value="#{veiculoController.veiculo.anoFabricacao}" />
+
+				<h:outputLabel for="name" value="Ano de modelo:" />
+				<p:inputText id="name3" required="true"
+					value="#{veiculoController.veiculo.anoModelo}" />
+
+				<h:outputLabel for="name" value="Cor:" />
+				<p:inputText id="name4" required="true"
+					value="#{veiculoController.veiculo.cor}" />
+				<p:commandButton value="Inserir" update="panel"
+					action="#{veiculoController.incluir(veiculoController.veiculo)}" />
+			</h:panelGrid>
+		</p:panel>
+
+
+	</h:form>
+
+
+
+	<h:form>
+		<h1>Veículos</h1>
+		<p:dataTable var="veiculo" value="#{veiculoController.listarTodos()}">
+			<p:column headerText="Placa">
+				<h:outputText value="#{veiculo.placa}" />
+			</p:column>
+
+			<p:column headerText="Ano de Fabricação">
+				<h:outputText value="#{veiculo.anoFabricacao}" />
+			</p:column>
+
+			<p:column headerText="Ano do Modelo">
+				<h:outputText value="#{veiculo.anoModelo}" />
+			</p:column>
+
+			<p:column headerText="Cor">
+				<h:outputText value="#{veiculo.cor}" />
+			</p:column>
+			<p:column>
+				<p:commandButton value="Excluir" />
+				<p:commandButton value="Editar" onclick="PF('dlg1').show();" >
+				 <f:setPropertyActionListener value="#{veiculo}" target="#{veiculoController.veiculo}" />
+				</p:commandButton>
+			</p:column>
+		</p:dataTable>
+
+    <p:overlayPanel widgetVar="dlg1" showEffect="fade" hideEffect="fade" dismissable="false" showCloseIcon="true">
+        <p:outputPanel id="carDetail" style="text-align:center;">
+            <p:panelGrid  columns="2" columnClasses="label,value">
+ 
+                <h:outputText value="Placa:" />
+                <h:outputText value="#{veiculo.placa}" />
+ 
+                <h:outputText value="Ano de Fabricação" />
+                <h:outputText value="#{veiculoController.veiculo.anoFabricacao}" />
+ 
+                <h:outputText value="Ano do Modelo:" />
+                <h:outputText value="#{veiculoController.veiculo.anoModelo}"/>
+ 
+                <h:outputText value="Cor: " />
+                <h:outputText value="#{veiculoController.veiculo.cor}" />
+            </p:panelGrid>
+        </p:outputPanel>
+    </p:overlayPanel>
+
+		<h1>Multas</h1>
+		<p:dataTable var="multa" value="#{multaController.listarTodos()}">
+
+			<p:column headerText="Placa">
+				<h:outputText value="#{multa.veiculo.placa}" />
+			</p:column>
+
+			<p:column headerText="Ano de Fabricação">
+				<h:outputText value="#{multa.descricao}" />
+			</p:column>
+
+			<p:column headerText="Ano do Modelo">
+				<h:outputText value="#{multa.artigoviolado}" />
+			</p:column>
+
+			<p:column>
+				<p:commandButton value="Excluir" />
+				<p:commandButton value="Editar" />
+			</p:column>
+
+		</p:dataTable>
+	</h:form>
+</body>
+</html>
